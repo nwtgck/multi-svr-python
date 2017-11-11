@@ -17,5 +17,5 @@ setup(
     install_requires=['scikit-learn', 'numpy', 'SciPy'],
     py_modules=["multi_svr"],
     packages=find_packages(),
-    test_suite='multi_svr_test.suite'
+    test_suite='tests'
 )
