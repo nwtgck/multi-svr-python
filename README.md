@@ -13,6 +13,9 @@ Support Vector Regression (SVR) for multidimensional labels
  ## Usage
  
  ```python
+import multi_svr
+from sklearn import metrics
+
 X = [
   [0, 0],
   [0, 10],
@@ -32,7 +35,7 @@ y = [
 ]
 
 #  Create SVR
-regressor = multi_svr.MutilSVR(kernel='linear')
+regressor = multi_svr.MultiSVR(kernel='linear')
 # Fit
 regressor.fit(X, y)
 # Predict
@@ -44,6 +47,6 @@ errs = metrics.mean_squared_error(y, pred_y)
  ## How to test
  
  ```bash
- cd <this repo
+ cd <this repo>
  python setup.py test
  ```

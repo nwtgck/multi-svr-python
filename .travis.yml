@@ -24,7 +24,10 @@ install:
   - pip install coveralls
 
 script:
-  - coverage run --source=nwtgck_hello_test setup.py test
+  - coverage run --source=src setup.py test
+
+  - pip3 install --upgrade git+https://github.com/nwtgck/multi-svr-python.git@$TRAVIS_BRANCH
+  - python examples/example1.py
 
 after_success:
   - coveralls
