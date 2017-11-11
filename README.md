@@ -44,6 +44,6 @@ errs = metrics.mean_squared_error(y, pred_y)
  ## How to test
  
  ```bash
- cd <this repo
+ cd <this repo>
  python setup.py test
  ```
