@@ -3,7 +3,7 @@ import multi_svr
 
 class MultiSVRTest(unittest.TestCase):
 
-  def test_1(self):
+  def test_dummy(self):
     self.assertEqual(1, 1) # TODO impl
 
 
