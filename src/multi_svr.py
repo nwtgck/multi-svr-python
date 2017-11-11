@@ -41,36 +41,3 @@ class MutilSVR(sklearn.base.BaseEstimator, sklearn.base.RegressorMixin):
 
     pred = np.column_stack(tuple(preds))
     return pred
-
-
-
-
-if __name__ == '__main__':
-  from sklearn import metrics
-  X = [
-    [0,  0],
-    [0, 10],
-    [1, 10],
-    [1, 20],
-    [1, 30],
-    [1, 40]
-  ]
-
-  y = [
-    [0,  0],
-    [0, 10],
-    [2, 10],
-    [2, 20],
-    [2, 30],
-    [2, 40]
-  ]
-
-  regressor = MutilSVR(kernel='linear')
-
-  regressor.fit(X, y)
-
-  pred_y = regressor.predict(X)
-  errs   = metrics.mean_squared_error(y, pred_y, multioutput='raw_values')
-
-  print('pred_y:', pred_y)
-  print('errs:', errs)
