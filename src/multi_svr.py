@@ -70,7 +70,7 @@ if __name__ == '__main__':
   regressor.fit(X, y)
 
   pred_y = regressor.predict(X)
-  err    = metrics.mean_squared_error(y, pred_y, multioutput='raw_values')
+  errs   = metrics.mean_squared_error(y, pred_y, multioutput='raw_values')
 
   print('pred_y:', pred_y)
-  print('err:', err)
+  print('errs:', errs)
