@@ -13,6 +13,8 @@ Support Vector Regression (SVR) for multidimensional labels
  ## Usage
  
  ```python
+import multi_svr
+
 X = [
   [0, 0],
   [0, 10],
@@ -44,6 +46,6 @@ errs = metrics.mean_squared_error(y, pred_y)
  ## How to test
  
  ```bash
- cd <this repo
+ cd <this repo>
  python setup.py test
  ```

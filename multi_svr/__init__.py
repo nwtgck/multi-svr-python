@@ -41,5 +41,3 @@ class MutilSVR(sklearn.base.BaseEstimator, sklearn.base.RegressorMixin):
 
     pred = np.column_stack(tuple(preds))
     return pred
-
-
