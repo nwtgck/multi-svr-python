@@ -9,7 +9,7 @@ sys.path.append('./tests')
 
 setup(
     name='multi_svr',
-    version='0.1.1-SNAPSHOT',
+    version='0.1.1',
     description='SVR for multidimensional label',
     author='Ryo Ota',
     author_email='nwtgck@gmail.com',
