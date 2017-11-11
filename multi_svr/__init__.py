@@ -3,7 +3,7 @@ import sklearn
 from sklearn import svm
 
 
-class MutilSVR(sklearn.base.BaseEstimator, sklearn.base.RegressorMixin):
+class MultiSVR(sklearn.base.BaseEstimator, sklearn.base.RegressorMixin):
   def __init__(self, **kwargs):
     self.__init_kwargs = kwargs
 
