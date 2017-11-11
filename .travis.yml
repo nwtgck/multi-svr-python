@@ -1,0 +1,35 @@
+# (from: https://qiita.com/masashi127/items/5bfcba5cad8e82958844)
+
+language: python
+
+python:
+  - 3.4
+  - 3.5
+  - 3.6
+
+addons:
+  apt:
+    packages:
+    # (from: https://github.com/dnouri/nolearn/blob/master/.travis.yml)
+    - libblas-dev
+    - liblapack-dev
+    - gfortran
+
+
+before_install:
+  - pip install -U pip setuptools wheel # (from: https://github.com/dnouri/nolearn/blob/master/.travis.yml)
+
+install:
+  - travis_wait travis_retry pip install -r requirements.txt # (from: https://github.com/dnouri/nolearn/blob/master/.travis.yml)
+  - pip install coveralls
+
+script:
+  - coverage run --source=nwtgck_hello_test setup.py test
+
+after_success:
+  - coveralls
+
+cache:
+  - apt
+  - directories:
+    - $HOME/.cache/pip
