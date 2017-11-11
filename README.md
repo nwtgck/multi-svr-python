@@ -13,6 +13,8 @@ Support Vector Regression (SVR) for multidimensional labels
  ## Usage
  
  ```python
+import multi_svr
+
 X = [
   [0, 0],
   [0, 10],
