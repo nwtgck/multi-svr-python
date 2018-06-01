@@ -4,6 +4,17 @@
 
 from setuptools import setup, find_packages
 import sys
+import toml
+
+def name_ver_join(name, ver):
+    if ver == "*":
+        return name
+    else:
+        return name + ver
+with open("Pipfile") as f:
+  pipfile_dict = toml.load(f)
+install_requires = [name_ver_join(name, ver) for name, ver in pipfile_dict['packages'].items()]
+
 
 sys.path.append('./tests')
 
@@ -13,7 +24,7 @@ setup(
     description='SVR for multidimensional label',
     author='Ryo Ota',
     author_email='nwtgck@gmail.com',
-    install_requires=['scikit-learn', 'numpy', 'SciPy'],
+    install_requires=install_requires,
     py_modules=["multi_svr"],
     packages=find_packages(),
     test_suite='tests'

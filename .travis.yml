@@ -20,11 +20,12 @@ before_install:
   - pip install -U pip setuptools wheel # (from: https://github.com/dnouri/nolearn/blob/master/.travis.yml)
 
 install:
-  - travis_wait travis_retry pip install -r requirements.txt # (from: https://github.com/dnouri/nolearn/blob/master/.travis.yml)
-  - pip install coveralls
+  - pip install pipenv
 
 script:
-  - coverage run --source=multi_svr setup.py test
+  - pipenv install
+  - pipenv install --dev
+  - pipenv run coverage run --source=multi_svr setup.py test
 
   - pip3 install --upgrade git+https://github.com/nwtgck/multi-svr-python.git#$TRAVIS_COMMIT
   - python examples/example1.py
