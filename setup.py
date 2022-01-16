@@ -23,7 +23,7 @@ setup(
     version='0.1.2',
     description='SVR for multidimensional label',
     author='Ryo Ota',
-    author_email='nwtgck@gmail.com',
+    author_email='nwtgck@nwtgck.org',
     install_requires=install_requires,
     py_modules=["multi_svr"],
     packages=find_packages(),
